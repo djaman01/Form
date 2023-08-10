@@ -1,0 +1,48 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 150px;
+}
+
+.form {
+  border: 2px black dotted;
+  height: 500px;
+  padding: 20px 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+label {
+  display: block;
+}
+
+div {
+  margin: 5px;
+}
+
+.gender {
+  margin-top: 100px;
+}
+
+.text-area {
+  margin-top: 120px;
+}
+
+fieldset {
+  width: 200px;
+}
+
+.button-div {
+  margin-left: 450px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  
+}
