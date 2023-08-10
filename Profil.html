@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+
+<body>
+  <!--enctype="multi..." est ce qui va nous permettre d'envoyer des photos au serveur-->
+  <form action="inputs.html" method="get" enctype="multipart/form-data"> <!--action is where our form is submitting to-->
+    <!--method = "GET" est ce qui va permettre lie les inputs à l'url et les envoies au site spécifié dans l'attribut action-->
+    <!--Get will "get" the name attribute from the inputs to show their them in the inputs.html page-->
+    <!-- method="POST" va être utilisé quand on aura un serveur ou on voudra enregistrer les informations -->
+    <!-- Donc les Browsers can only render Get request, so it'll work when we'll click on submit -->
+    <div>
+      <!--Explicit association of label with for/id: Cleaner and easier to style than implicit association-->
+      <label for="name"> Name
+      </label><!--when clicked on it: Labels will highlight the fields that is being labeled for /it's useful for users and screenreaders-->
+      <input required type="text" name="name" id="name" placeholder="username">
+      <!--name attribute sert à faire appaitre les valeurs de l'input dans la page action='inputs.html'grace à la method="Get"-->
+      <!--Par défaut c'est type="text" dans les inputs, but it's good pratice to specify it-->
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input required type="email" name="email" id="email" placeholder="your e-mail">
+      <!--Par défaut, le browser demande à l'user de bien écrire son mail s'il oublie @ par exemple-->
+    </div>
+
+    <div>
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" min="1" max="110" step="1">
+      <!--min et max permettent d'établir un input min et max que l'user peut mettre-->
+      <!--Step permet de determiner de combien l'user peut monter dans l'age quand il clique sur la fleche ex: step="1" mon 1an par 1an quand il clique-->
+
+    </div>
+
+    <div>
+      <label for="date">Birthday</label>
+      <input type="date" name="date" id="date" min="2005-01-25">
+      <!--min ici n'autorisera pas à selectionner une date sous la date inscrite-->
+    </div>
+
+    <div>
+      Sex:
+      <div>
+        <label for="male">Man</label>
+        <input type="radio" id="male" name="sex" value="man">
+        <!-- Pour les checkbox, on est obligé de mettre une value attribute dans l'input: car c'est cette valeur qui va etre submit et à part ça on ne fait que cliquer sur un bouton a cote d'un label, ce qui n'est pas une valeur -->
+      </div>
+
+      <div>
+        <label for="Woman">Woman</label>
+        <input type="radio" id="woman" name="sex" value="woman">
+      </div>
+      <!--Le fait de leur avoir donner le même name="sex" + type="radio" est ce qui va faire qu'on ne pourra en selectionné qu'1 seul-->
+    </div>
+
+    <div>
+      <label for="activity"> Activity </label>
+      <select id="activity" name="activity"> <!-- Si on ajoute l'attribut multiple; ça va nous permettre de selectionner plusieurs choix en appuyant sur ctrl tout en cliquant-->
+        <option value="student">Student</option>
+        <option label="worker" value="worker">Worker</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" cols="30" rows="5"></textarea> 
+      <!-- !!!! Toujours laisser <textarea></textarea> collés sinon ça va rajouter l'espace blanc dans l'input-->
+    </div>
+
+    <div>
+      <label for="file">Your Picture</label>
+      <input type="file" id="file" name="file">
+    </div>
+
+    <div>
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone">
+      <!-- sur les telephones, montre un clavier special pour numeros-->
+    </div>
+
+    <div>
+      <label for="site">Website</label>
+      <input type="url" id="site" name="site">
+    </div>
+
+
+    <div>
+      <label>
+        <!--Implicit association: It's more efficient with checkboxes and radio buttons-->
+        Passeword
+        <input required type="password" name="password" placeholder="password">
+        <!--Required permet d'obliger l'user à entrer une valeur dans l'input-->
+      </label>
+
+    </div>
+    <button type="reset"> Reset </button><!--Permet de reset tous les inputs en 1 click-->
+    <button type="submit">Submit</button>
+    <!--Le type='submit' montre que c'est le bouton qui va submit le form et permet d'avoir d'autres bouttons dans le form qui ne vont pas submit les values des inputs-->
+  </form>
+
+
+
+</body>
+
+</html>

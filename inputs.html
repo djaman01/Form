@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-compatible" content="ie-edge">
+  <title>Inputs</title>
+</head>
+
+<body>
+
+  <div id="inputs"></div>
+  <a href="/">Back to Form</a> <!--Link that goes back to our form if inputs doesn't show-->
+ 
+ <script>
+    //Javascript to render the result of the form inputs submitted
+    const inputsList = document.getElementById('inputs');
+    //ATTENTION Si on met une majuscule au lieu de minuscule quelque part, ça ne marchera pas !!!
+    new URLSearchParams(window.location.search).forEach((value, name)=> {
+      inputsList.append(`${name}: ${value}`);
+      inputsList.append(document.createElement('br'));
+    })
+
+  </script>
+  
+</body>
+</html>
