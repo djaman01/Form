@@ -46,3 +46,17 @@ fieldset {
   justify-content: space-around;
   
 }
+
+.title-inputs {
+  display: flex;
+  align-items: center;
+  border: 2px grey solid;
+  height: 50px;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 400px;
+}
+
+.first-name-list {
+  color: red;
+}
