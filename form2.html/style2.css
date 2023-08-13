@@ -64,3 +64,23 @@ fieldset {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.column-list1 div {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.column-list2 div {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.column-list1 span:first-child {
+  color: red;
+}
+
+.column-list2 span:first-child {
+  color: red;
+}
