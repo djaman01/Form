@@ -18,10 +18,7 @@ function addToList(first) {
   let createList = document.createElement('div');
 
   let listContent = `
-  <div>
-    <Span class="first-name-list">First Name:</Span>
-    <span>${first}</span>
-  </div>
+
   
   `
   createList.innerHTML= listContent;

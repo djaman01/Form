@@ -54,9 +54,13 @@ fieldset {
   height: 50px;
   width: 500px;
   margin-top: 50px;
-  margin-left: 400px;
+  margin-left: 150px;
 }
 
-.first-name-list {
-  color: red;
+/* styling list inputs */
+
+
+.input-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
