@@ -48,7 +48,7 @@ fieldset {
 }
 
 .title-inputs{
-  margin-left: 500px;
+  margin-left: 350px;
   margin-top: 20px;
 }
 
@@ -61,7 +61,7 @@ fieldset {
 
 .input-list{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 800px 800px;
 }
 
 .column-list1 div {
