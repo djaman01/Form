@@ -47,14 +47,13 @@ fieldset {
   
 }
 
-.title-inputs {
-  display: flex;
-  align-items: center;
-  border: 2px grey solid;
-  height: 50px;
-  width: 500px;
-  margin-top: 50px;
-  margin-left: 150px;
+.title-inputs{
+  margin-left: 500px;
+  margin-top: 20px;
+}
+
+.fieldset-inputs{
+  width: 300px;
 }
 
 /* styling list inputs */
