@@ -6,6 +6,9 @@ submitButton.addEventListener('click', access)
 function access(e) {
   e.preventDefault();//Pour empêcher le bouton submit du form, d'envoyer le formule et rafraichir la page, car c'est pas defaut
 
+  document.getElementById("submitcheck").disabled = true;//!!! Pour desactiver le boutton une fois qu'il est cliqué 1 fois
+
+
   let first = document.getElementById('name').value;
   let last= document.getElementById('last-name').value;
   let birth= document.getElementById('birthday').value;
@@ -19,7 +22,7 @@ function access(e) {
   let pic= document.getElementById('pic').value;
 
 
-  addToList(first, last, birth, mail, gender, linkedin, github, exp, bio, pic);
+  addToList(first, last, birth, mail, gender, linkedin, github, exp, bio, pic);  
 
 }
 
@@ -27,7 +30,6 @@ function addToList(first, last, birth, mail, gender, linkedin,github, exp, bio, 
   
   let inputList = document.querySelector('.input-list');
   let createList = document.createElement('div');
-
   let listContent = `
   <div class="column-list1">
       <div>
